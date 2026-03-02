@@ -1,5 +1,6 @@
 package com.fiap.ec.backend_consultas.controller;
 import com.fiap.ec.backend_consultas.model.Especialidade;
+import com.fiap.ec.backend_consultas.model.Paciente;
 import com.fiap.ec.backend_consultas.service.EspecialidadeService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -19,5 +20,9 @@ public class EspecialidadeController {
     @GetMapping
     public List<Especialidade> listar() {
         return service.listar();
+    }
+    @GetMapping("/{id}")
+    public Especialidade buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
     }
 }
