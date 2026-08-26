@@ -2,7 +2,6 @@ package com.fiap.ec.backend_consultas.model;
 import jakarta.persistence.*;
 @Entity
 @Table(name = "especialidades")
-
 public class Especialidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

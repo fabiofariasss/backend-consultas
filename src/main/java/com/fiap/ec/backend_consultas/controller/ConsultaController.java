@@ -20,44 +20,44 @@ import com.fiap.ec.backend_consultas.service.ConsultaService;
 @CrossOrigin
 public class ConsultaController {
 
- private final ConsultaService service;
+    private final ConsultaService service;
 
- public ConsultaController(ConsultaService service) {
- this.service = service;
- }
+    public ConsultaController(ConsultaService service) {
+        this.service = service;
+    }
 
- @GetMapping
- public List<Consulta> listar() {
- return service.listar();
- }
+    @GetMapping
+    public List<Consulta> listar() {
+        return service.listar();
+    }
 
- @GetMapping("/{id}")
- public Consulta buscarPorId(@PathVariable Long id) {
- return service.buscarPorId(id);
- }
+    @GetMapping("/{id}")
+    public Consulta buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
 
- @PostMapping
- public Consulta criar(@RequestBody Consulta consulta) {
- return service.salvar(consulta);
- }
+    @PostMapping
+    public Consulta criar(@RequestBody Consulta consulta) {
+        return service.salvar(consulta);
+    }
 
- @PutMapping("/{id}")
- public Consulta atualizar(@PathVariable Long id, @RequestBody Consulta consulta) {
- return service.atualizar(id, consulta);
- }
+    @PutMapping("/{id}")
+    public Consulta atualizar(@PathVariable Long id, @RequestBody Consulta consulta) {
+        return service.atualizar(id, consulta);
+    }
 
- @DeleteMapping("/{id}")
- public void deletar(@PathVariable Long id) {
- service.deletar(id);
- }
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        service.deletar(id);
+    }
 
- @GetMapping("/medico/{medicoId}")
- public List<Consulta> listarPorMedico(@PathVariable Long medicoId) {
- return service.listarPorMedico(medicoId);
- }
+    @GetMapping("/medico/{medicoId}")
+    public List<Consulta> listarPorMedico(@PathVariable Long medicoId) {
+        return service.listarPorMedico(medicoId);
+    }
 
- @GetMapping("/paciente/{pacienteId}")
- public List<Consulta> listarPorPaciente(@PathVariable Long pacienteId) {
- return service.listarPorPaciente(pacienteId);
- }
+    @GetMapping("/paciente/{pacienteId}")
+    public List<Consulta> listarPorPaciente(@PathVariable Long pacienteId) {
+        return service.listarPorPaciente(pacienteId);
+    }
 }

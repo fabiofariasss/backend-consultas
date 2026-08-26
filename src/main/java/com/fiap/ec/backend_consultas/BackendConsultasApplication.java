@@ -9,4 +9,5 @@ public class BackendConsultasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BackendConsultasApplication.class, args);
 	}
+
 }
