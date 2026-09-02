@@ -324,3 +324,6 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/FIAP-2026/Tur
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
 	... 60 more
+2026-09-01 22:31:32.541540-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]PACIENTE_ID"; expected "PREPARE"; SQL statement:
+PACIENTE_ID [42001-240]
